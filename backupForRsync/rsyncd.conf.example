@@ -1,0 +1,23 @@
+address = 0.0.0.0
+port = 873
+log file = /var/log/rsyncd.log
+pid file = /var/run/rsyncd.pid
+lock file = /var/run/rsync.lock
+uid = www
+gid = www
+use chroot = yes
+read only = false
+write only = true
+max connections = 20
+timeout = 300
+transfer logging = true
+log format = "%o %m %f %a"
+hosts allow=*
+hosts deny=*
+auth users = backup
+secrets file = /data/rsyncd/rsyncd.pwd
+list = no
+[example]
+        path = 
+        comment =
+	exclude =
